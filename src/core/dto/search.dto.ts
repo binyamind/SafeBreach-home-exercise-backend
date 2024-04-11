@@ -10,6 +10,6 @@ export const QueryParamValidation = createParamDecorator(
     const request = ctx.switchToHttp().getRequest();
     if (request.query['q'] === '')
       throw new Generic400Error('query param missing', HttpStatus.NOT_FOUND);
-    return request.user;
+    return request.query['q'];
   },
 );
