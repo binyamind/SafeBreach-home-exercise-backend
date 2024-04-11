@@ -10,6 +10,7 @@ import {
 import { WINSTON_MODULE_PROVIDER } from 'nest-winston';
 import { YellowPagesService } from './yellowPages.service';
 import { QueryParamValidation } from '../dto/search.dto';
+import { PersonResponse } from 'src/models/Person.Respones';
 
 @Controller('yellow-pages')
 export class YellowPagesController {
@@ -19,7 +20,9 @@ export class YellowPagesController {
   ) {}
   @UsePipes(new ValidationPipe({ transform: true }))
   @Get('search')
-  async findAll(@QueryParamValidation('q') searchParam: string) {
+  async findAll(
+    @QueryParamValidation('q') searchParam: string,
+  ): Promise<Array<PersonResponse>> {
     this.logger.verbose(`Searching for ${searchParam}`);
     return await this.yellowPagesServise.findAll(searchParam);
   }
