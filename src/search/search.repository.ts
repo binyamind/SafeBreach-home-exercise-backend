@@ -52,9 +52,9 @@ export class SearchRepository implements Repository {
       case PersonKeys.NAME:
         return value.includes(term);
       case PersonKeys.BIRTHDAY:
-        return ageParsesr(value).includes(term);
+        return ageParsesr(value) === term;
       case PersonKeys.PHONE_NUMBER:
-        return value.includes(term);
+        return value === term;
       default:
         return false;
     }
