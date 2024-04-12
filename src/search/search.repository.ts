@@ -36,7 +36,7 @@ export class SearchRepository implements Repository {
     return results.map((item) => {
       return {
         address: item.address,
-        age: item.birthday,
+        age: ageParsesr(item.birthday.toString()),
         name: item.name,
         phone: item.phone_number,
         portrait: item.picture,
