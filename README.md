@@ -58,16 +58,9 @@ $ npm run test:e2e
 $ npm run test:cov
 ```
 
-## Support
+## About The API
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
+1. The end point to fetch the conatas is `http://localhost:3001/yellow-pages/api/search?q='{you'r query search}'`
+2. As Well You Could Open  `http://localhost:3001/api/#/` For Swagger Documentation
 
 Nest is [MIT licensed](LICENSE).
